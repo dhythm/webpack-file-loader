@@ -15,11 +15,18 @@ touch webpack.config.js
 npm i -D typescript ts-loader typesync
 npx tsc --init
 
-npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-loader
+npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-loader eslint-plugin-import eslint-plugin-unused-imports
 npx eslint --init
 
 touch .prettierrc
 npm i -D husky lint-staged concurrently
+
+npx sb init
+rm -rf src/stories
+touch .stories/webpack.config.js
+
+mkdir .vscode
+touch .vscode/settings.json
 
 npm install
 
