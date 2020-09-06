@@ -2,10 +2,10 @@ env:
   browser: true
   es2020: true
 extends:
-  - 'plugin:prettier/recommended'
-  - 'prettier/@typescript-eslint'
-  - 'prettier/react'
-parser: '@typescript-eslint/parser'
+  - "plugin:prettier/recommended"
+  - "prettier/@typescript-eslint"
+  - "prettier/react"
+parser: "@typescript-eslint/parser"
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -13,13 +13,13 @@ parserOptions:
   sourceType: module
 plugins:
   - react
-  - '@typescript-eslint'
+  - "@typescript-eslint"
   - import
   - unused-imports
   - sort-export-all
 rules:
   sort-imports: 0
-  'import/order':
+  "import/order":
     - warn
     - groups:
         - builtin
@@ -30,28 +30,28 @@ rules:
   no-restricted-imports:
     - error
     - patterns:
-        - '@material-ui/*'
+        - "@material-ui/*"
   sort-export-all/sort-export-all: off
-  # '@typescript-eslint/no-unused-vars': off
-  # unused-imports/no-unused-imports-ts: error
+  "@typescript-eslint/no-unused-vars": off
+  unused-imports/no-unused-imports-ts: warn
   # unused-imports/no-unused-var-ts:
   #   - warn
   #   - wars: 'all'
   #     varsIgnorePattern: '^_'
   #     args: 'after-used'
   #     argsIgnorePattern: '^_'
-  # react/jsx-uses-react: 1
-  # react/jsx-uses-vars: 1
+  react/jsx-uses-react: warn
+  react/jsx-uses-vars: warn
 overrides:
   - files:
-      - '**/*.tsx'
+      - "**/*.tsx"
     rules:
-      react/prop-types: 'off'
+      react/prop-types: "off"
   - files:
-      - '**/*.js'
+      - "**/*.js"
     rules:
-      prettier/prettier: 'off'
+      prettier/prettier: "off"
   - files:
-      - '**/index.{ts,js}'
+      - "**/index.{ts,js}"
     rules:
       sort-export-all/sort-export-all: warn
