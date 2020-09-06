@@ -22,7 +22,7 @@ touch .prettierrc
 npm i -D husky lint-staged concurrently
 
 npx sb init
-rm -rf src/stories
+rm -rf stories
 touch .stories/webpack.config.js
 
 mkdir .vscode

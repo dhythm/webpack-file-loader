@@ -6,7 +6,8 @@ const webpack = require('webpack');
 module.exports = {
   entry: './src/index.tsx',
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.tsx?$/,
         enforce: 'pre',
         loader: 'eslint-loader',
@@ -18,6 +19,14 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'app/assets/img',
+        },
       },
     ],
   },
