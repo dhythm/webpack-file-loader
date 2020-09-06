@@ -15,7 +15,7 @@ touch webpack.config.js
 npm i -D typescript ts-loader typesync
 npx tsc --init
 
-npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-loader eslint-plugin-import eslint-plugin-unused-imports
+npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-loader eslint-plugin-import eslint-plugin-unused-imports eslint-plugin-sort-export-all
 npx eslint --init
 
 touch .prettierrc
